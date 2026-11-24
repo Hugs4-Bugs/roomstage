@@ -1,3 +1,5 @@
+import LayoutScorePanel from '../components/LayoutScorePanel';
+
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import client from '../api/client';
@@ -102,7 +104,7 @@ export default function RoomDetail() {
               onMove={handleMove}
             />
           </div>
-
+          <LayoutScorePanel room={room} furniture={furniture} />
           <div className="h-10 mt-3 flex items-center gap-2">
             {selectedPiece ? (
               <>
